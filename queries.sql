@@ -1,6 +1,7 @@
-CREATE DATABASE nba_analysis;
+CREATE DATABASE IF NOT EXISTS nba_analysis;
 USE nba_analysis;
 
+DROP TABLE IF EXISTS nba_team_financials;
 CREATE TABLE nba_team_financials (
     team VARCHAR(50),
     payroll VARCHAR(50),
@@ -14,7 +15,7 @@ CREATE TABLE nba_team_financials (
 
 SET GLOBAL local_infile = 1;
 
-LOAD DATA LOCAL INFILE '/Users/twandon/Desktop/nba_team_financials.csv'
+LOAD DATA LOCAL INFILE 'data/nba_team_financials.csv'
 INTO TABLE nba_team_financials
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
