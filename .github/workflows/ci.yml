@@ -1,0 +1,23 @@
+name: SQL Lint and Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-sql:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up MySQL
+        uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: '8.0'
+
+      - name: Execute SQL Pipeline
+        run: |
+          mysql -u root -e "SOURCE queries.sql;"
