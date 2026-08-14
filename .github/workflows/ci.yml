@@ -18,6 +18,9 @@ jobs:
         with:
           mysql-version: '8.0'
 
+      - name: Enable local_infile
+        run: mysql -u root -e "SET GLOBAL local_infile=1;"
+
       - name: Execute SQL Pipeline
         run: |
-          mysql -u root -e "SOURCE queries.sql;"
+          mysql -u root --local-infile=1 -e "SOURCE queries.sql;"
