@@ -1,5 +1,7 @@
 # NBA Team Financial & Performance Analysis (2025-26)
 
+![CI](https://github.com/akiffin/nba-financial-analysis/actions/workflows/ci.yml/badge.svg)
+
 Analyzed the relationship between player payroll, revenue, and on-court performance across all 30 NBA teams. Built a weighted efficiency model in Excel and supported the analysis with MySQL queries.
 
 ## Key Question
@@ -29,3 +31,4 @@ Created a composite **Overall Efficiency Score** using four weighted metrics:
 ## Project Structure
 - `nba team financials.xlsx` — Full Excel model (Data, Calculations, Rankings, Dashboard)
 - `queries.sql` — MySQL setup, cleaning, and analytics queries
+- `data/nba_team_financials.csv` — Raw dataset used in the SQL pipeline
