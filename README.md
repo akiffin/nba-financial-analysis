@@ -1,4 +1,5 @@
 # NBA Financial Analysis
+![CI](https://github.com/akiffin/nba-financial-analysis/actions/workflows/ci.yml/badge.svg)
 
 This project tracks NBA team spending and wins using MySQL.
 
