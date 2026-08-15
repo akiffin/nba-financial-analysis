@@ -5,7 +5,7 @@
 Analyzed the relationship between player payroll, revenue, and on-court performance across all 30 NBA teams. Built a weighted efficiency model in Excel and supported the analysis with MySQL queries.
 
 ## Key Question
-Do teams that spend more on payroll actually win more and generate better financial returns?
+Does spending more money on players actually make an NBA team win more?
 
 ## Methodology
 Created a composite **Overall Efficiency Score** using four weighted metrics:
